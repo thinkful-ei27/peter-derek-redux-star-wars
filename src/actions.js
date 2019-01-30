@@ -25,9 +25,7 @@ export const searchCharacters = name => dispatch => {
     // It should dispatch the three sync actions above
     dispatch(searchCharactersRequest());
     search(name)
-        .then(characters => {
-            console.log(characters)
-            dispatch(searchCharactersSuccess(characters))})
+        .then(characters => dispatch(searchCharactersSuccess(characters)))
         .catch(error => dispatch(searchCharactersError(error)));
 };
 

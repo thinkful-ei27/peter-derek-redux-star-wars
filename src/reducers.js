@@ -20,13 +20,13 @@ export function characterReducer(state=initialState, action) {
         }
     }
     else if (action.type === SEARCH_CHARACTERS_SUCCESS) {
-        console.log(action.charaters);
+        console.log(action.characters);
         
-        // return {
-        //     ...state,
-        //     loading: false,
-        //     characters: action.charaters
-        // }
+        return {
+            ...state,
+            loading: false,
+            characters: action.characters
+        }
     }
     else if (action.type === SEARCH_CHARACTERS_ERROR) {
         return {
